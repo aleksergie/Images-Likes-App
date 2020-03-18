@@ -1,0 +1,19 @@
+{
+  "name": "task-mvc",
+  "version": "1.0.0",
+  "description": "Task: MVC Concept",
+  "main": "index.js",
+  "scripts": {
+    "build:dev": "webpack --development --watch",
+    "build:prod": "webpack --production"
+  },
+  "author": "Oleksii Serhiienko",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
+}
