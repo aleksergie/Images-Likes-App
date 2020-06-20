@@ -3,7 +3,8 @@ class Controller {
     this.model = model;
     this.view = view;
     this.model.bindListChanged(this.onPersonListChanged.bind(this));
-    this.view.bindIncrementLikes(this.handleIncrementLikes.bind(this));
+    this.view.bindIncrementLikes(this.handleIncrementLikes);
+    // this.view.bindIncrementLikes(this.handleIncrementLikes.bind(this));
     this.view.bindShowModal(this.handleModal.bind(this));
     this.view.bindChangeoverNext(this.handleChangeoverNext.bind(this));
     this.view.bindChangeoverPrev(this.handleChangeoverPrev.bind(this));
@@ -16,9 +17,9 @@ class Controller {
     this.view.renderModal(person);
   }
 
-  handleIncrementLikes(id) {
+  handleIncrementLikes = (id) => {
     this.model.editLikes(id);
-  }
+  };
 
   handleModal(id) {
     this.personModal = this.model.getPersonForModal(id);
